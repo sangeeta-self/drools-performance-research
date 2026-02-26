@@ -1,0 +1,24 @@
+package rules;
+
+import com.research.model.Policy;
+
+rule "Age Loading"
+when
+    $p : Policy(age > 60)
+then
+    $p.setFinalPremium($p.getFinalPremium() + 2000);
+end
+
+rule "Smoker Loading"
+when
+    $p : Policy(smoker == true)
+then
+    $p.setFinalPremium($p.getFinalPremium() + 3000);
+end
+
+rule "Tier1 Loading"
+when
+    $p : Policy(cityTier == "Tier1")
+then
+    $p.setFinalPremium($p.getFinalPremium() + 1000);
+end

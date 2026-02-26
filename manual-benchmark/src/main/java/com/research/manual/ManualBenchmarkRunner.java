@@ -43,7 +43,7 @@ public class ManualBenchmarkRunner {
     public static void main(String[] args) {
 
         int[] ruleCounts = {50, 150, 300, 500};
-        int policyCount = 500_000;
+        int policyCount = 100_000;
 
         for (int rules : ruleCounts) {
 
