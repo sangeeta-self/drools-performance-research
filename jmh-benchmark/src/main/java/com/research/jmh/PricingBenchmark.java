@@ -49,9 +49,7 @@ public class PricingBenchmark {
     // Drools Batch Benchmark
     @Benchmark
     public void benchmarkDroolsEngine(Blackhole bh) {
-
         droolsEngine.evaluateBatch(policies);
-
         bh.consume(policies.get(0).getFinalPremium());
     }
 
