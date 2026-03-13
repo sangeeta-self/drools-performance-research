@@ -37,12 +37,9 @@ public class PricingBenchmark {
     // Custom Engine Benchmark
     @Benchmark
     public void benchmarkCustomEngine(Blackhole bh) {
-
         for (Policy p : policies) {
             customEngine.evaluate(p);
         }
-
-        // Consume something to avoid dead-code elimination
         bh.consume(policies.get(0).getFinalPremium());
     }
 

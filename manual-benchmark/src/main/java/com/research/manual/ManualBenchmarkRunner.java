@@ -8,38 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ManualBenchmarkRunner {
-
-    /*public static void main(String[] args) {
-
-        int ruleCount = 300;        // change: 50,150,300,500
-        int policyCount = 100_000;  // number of policies
-
-        System.out.println("Generating " + policyCount + " policies...");
-        List<Policy> policies = generatePolicies(policyCount);
-
-
-        CustomPricingEngine engine = new CustomPricingEngine(ruleCount);
-
-        System.out.println("Starting Custom Engine benchmark...");
-        long start = System.nanoTime();
-
-        for (Policy policy : policies) {
-            engine.evaluate(policy);
-        }
-
-        long end = System.nanoTime();
-
-        long durationNs = end - start;
-        double durationMs = durationNs / 1_000_000.0;
-
-        System.out.println("Rules count: " + ruleCount);
-        System.out.println("Policies processed: " + policyCount);
-        System.out.println("Execution Time: " + durationMs + " ms");
-
-        double throughput = policyCount / (durationMs / 1000);
-        System.out.println("Throughput: " + throughput + " policies/sec");
-    }*/
-
     public static void main(String[] args) {
 
         int[] ruleCounts = {50, 150, 300, 500};

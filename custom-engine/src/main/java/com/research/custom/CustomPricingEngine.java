@@ -18,7 +18,6 @@ public class CustomPricingEngine {
         for (Rule rule : rules) {
             rule.apply(p);
         }
-        // Risk escalation
         if (p.getFinalPremium() > 30000) {
             p.setRiskCategory("HIGH");
         }
